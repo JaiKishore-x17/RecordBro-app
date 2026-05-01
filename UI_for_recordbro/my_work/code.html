@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Work - RecordBro</title>
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts (Inter) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1b1b1f",
+                        "surface-dim": "#131317",
+                        "on-tertiary-container": "#30303b",
+                        "on-surface-variant": "#c9c4d4",
+                        "inverse-on-surface": "#303034",
+                        "secondary-container": "#4b4b53",
+                        "secondary": "#c7c5cf",
+                        "on-secondary-fixed-variant": "#46464e",
+                        "secondary-fixed": "#e3e1eb",
+                        "primary-fixed-dim": "#cbbeff",
+                        "on-tertiary-fixed-variant": "#454651",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c7c5cf",
+                        "on-secondary-container": "#bcbac4",
+                        "tertiary-fixed": "#e3e1ef",
+                        "surface-container-highest": "#353439",
+                        "inverse-primary": "#614eb2",
+                        "surface-container": "#1f1f23",
+                        "primary-fixed": "#e6deff",
+                        "on-secondary-fixed": "#1b1b22",
+                        "on-primary-fixed-variant": "#493598",
+                        "surface": "#131317",
+                        "background": "#131317",
+                        "tertiary-fixed-dim": "#c6c5d3",
+                        "outline": "#938e9d",
+                        "on-primary": "#321a81",
+                        "inverse-surface": "#e4e1e7",
+                        "on-secondary": "#303037",
+                        "error": "#ffb4ab",
+                        "tertiary": "#c6c5d3",
+                        "primary-container": "#9d8af2",
+                        "on-error": "#690005",
+                        "on-primary-container": "#331a82",
+                        "surface-container-high": "#2a2a2e",
+                        "on-background": "#e4e1e7",
+                        "surface-variant": "#353439",
+                        "surface-tint": "#cbbeff",
+                        "primary": "#cbbeff",
+                        "on-surface": "#e4e1e7",
+                        "on-tertiary": "#2f303a",
+                        "surface-container-lowest": "#0e0e12",
+                        "surface-bright": "#39393d",
+                        "on-tertiary-fixed": "#1a1b25",
+                        "outline-variant": "#484552",
+                        "tertiary-container": "#9998a5",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#1d0061"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "4px",
+                        "stack-md": "12px",
+                        "section-gap": "48px",
+                        "container-padding": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h3": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "500" }],
+                        "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed w-full z-40 bg-[#121215] dark:bg-[#121215] docked full-width top-0 border-b border-[#2A2A30] flat no shadows font-['Inter'] font-semibold tracking-tight text-lg">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<button class="text-gray-400 hover:bg-[#1C1C21] transition-colors p-2 rounded-full Active: opacity-80 duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-[#9D8AF2] font-bold text-xl tracking-tighter">RecordBro</h1>
+<button class="text-gray-400 hover:bg-[#1C1C21] transition-colors p-2 rounded-full Active: opacity-80 duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 md:px-12 max-w-[1200px] w-full mx-auto">
+<!-- Page Header -->
+<div class="mb-stack-lg">
+<h2 class="font-h1 text-h1 text-on-surface mb-stack-sm">My Work</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Manage your active academic commitments and review completed milestones.
+            </p>
+</div>
+<!-- Navigation Tabs -->
+<div class="flex items-center gap-stack-md mb-section-gap border-b border-surface-container-high pb-stack-sm">
+<button class="px-4 py-2 font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary transition-all">
+                Pending
+            </button>
+<button class="px-4 py-2 font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent hover:border-surface-container-highest">
+                Completed
+            </button>
+</div>
+<!-- Pending Work Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<!-- Work Item Card 1 -->
+<article class="bg-surface-container-low border border-surface-container-high rounded-xl p-container-padding flex flex-col gap-stack-md hover:bg-surface-container transition-colors relative group overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start">
+<span class="bg-surface-container-highest text-secondary-fixed rounded px-2 py-1 font-label-sm text-label-sm uppercase tracking-widest">
+                        Data Structures
+                    </span>
+<span class="text-primary-container font-label-md text-label-md font-bold">
+                        +50 XP
+                    </span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight mt-stack-sm">
+                    Implement Graph Traversal Algorithms
+                </h3>
+<div class="flex-grow"></div>
+<div class="flex items-center justify-between pt-stack-md border-t border-surface-container-high mt-stack-md">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+<span class="text-error">Due in 2 days</span>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors border border-outline-variant group-hover:border-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Work Item Card 2 -->
+<article class="bg-surface-container-low border border-surface-container-high rounded-xl p-container-padding flex flex-col gap-stack-md hover:bg-surface-container transition-colors relative group overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary-container opacity-30 group-hover:opacity-80 transition-opacity"></div>
+<div class="flex justify-between items-start">
+<span class="bg-surface-container-highest text-secondary-fixed rounded px-2 py-1 font-label-sm text-label-sm uppercase tracking-widest">
+                        Modern History
+                    </span>
+<span class="text-tertiary-fixed font-label-md text-label-md font-bold">
+                        Read Only
+                    </span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight mt-stack-sm">
+                    Review Chapters 4-6: Industrial Revolution Impacts
+                </h3>
+<div class="flex-grow"></div>
+<div class="flex items-center justify-between pt-stack-md border-t border-surface-container-high mt-stack-md">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="calendar_today">calendar_today</span>
+<span>Due next week</span>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-highest hover:bg-surface-bright flex items-center justify-center transition-colors border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Work Item Card 3 (Bento style spanning) -->
+<article class="bg-surface-container border border-outline-variant rounded-xl p-container-padding flex flex-col gap-stack-md md:col-span-2 lg:col-span-1 hover:border-primary transition-colors relative group">
+<div class="flex justify-between items-start">
+<span class="bg-primary-container/10 text-primary-fixed rounded px-2 py-1 font-label-sm text-label-sm uppercase tracking-widest border border-primary-container/20">
+                        Thesis Prep
+                    </span>
+<span class="text-primary-container font-label-md text-label-md font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="star">star</span> High Priority
+                    </span>
+</div>
+<h3 class="font-h2 text-h2 text-on-surface leading-tight mt-stack-sm">
+                    Draft Methodology Section Outline
+                </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-stack-sm">
+                    Include primary sources list, justification for qualitative approach, and initial interview questionnaire drafts.
+                </p>
+<div class="flex-grow"></div>
+<!-- Minimal Progress Bar -->
+<div class="mt-stack-md">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Progress</span>
+<span>40%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[40%] rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-stack-md border-t border-surface-container-high mt-stack-md">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="warning">warning</span>
+<span class="text-error font-medium">Due Tomorrow</span>
+</div>
+<button class="px-4 py-2 rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-colors">
+                        Continue
+                    </button>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Shell) -->
+<nav class="md:hidden bg-[#1C1C21] dark:bg-[#1C1C21] fixed bottom-0 w-full z-50 border-t border-[#2A2A30] flat no shadows font-['Inter'] text-[11px] font-medium uppercase tracking-widest fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 h-20">
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#9D8AF2] border-t-2 border-[#9D8AF2] pt-2 Active: scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px] fill-icon" data-icon="menu_book">menu_book</span>
+<span>Work</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="add_circle">add_circle</span>
+<span>Create</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span>Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

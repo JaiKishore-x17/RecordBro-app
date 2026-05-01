@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign In | RecordBro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121215;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e4e1e7",
+                      "on-secondary-container": "#bcbac4",
+                      "on-primary": "#321a81",
+                      "error": "#ffb4ab",
+                      "tertiary-container": "#9998a5",
+                      "on-primary-fixed-variant": "#493598",
+                      "surface": "#131317",
+                      "primary-container": "#9d8af2",
+                      "secondary": "#c7c5cf",
+                      "on-secondary": "#303037",
+                      "on-tertiary": "#2f303a",
+                      "secondary-fixed": "#e3e1eb",
+                      "on-tertiary-container": "#30303b",
+                      "surface-container": "#1f1f23",
+                      "on-primary-container": "#331a82",
+                      "on-surface-variant": "#c9c4d4",
+                      "secondary-fixed-dim": "#c7c5cf",
+                      "outline": "#938e9d",
+                      "primary-fixed": "#e6deff",
+                      "surface-container-low": "#1b1b1f",
+                      "primary-fixed-dim": "#cbbeff",
+                      "on-error-container": "#ffdad6",
+                      "surface-tint": "#cbbeff",
+                      "surface-container-lowest": "#0e0e12",
+                      "error-container": "#93000a",
+                      "on-primary-fixed": "#1d0061",
+                      "surface-container-high": "#2a2a2e",
+                      "tertiary-fixed-dim": "#c6c5d3",
+                      "inverse-on-surface": "#303034",
+                      "on-secondary-fixed": "#1b1b22",
+                      "surface-bright": "#39393d",
+                      "inverse-surface": "#e4e1e7",
+                      "on-error": "#690005",
+                      "background": "#131317",
+                      "secondary-container": "#4b4b53",
+                      "surface-dim": "#131317",
+                      "on-surface": "#e4e1e7",
+                      "on-secondary-fixed-variant": "#46464e",
+                      "inverse-primary": "#614eb2",
+                      "outline-variant": "#484552",
+                      "on-tertiary-fixed-variant": "#454651",
+                      "surface-container-highest": "#353439",
+                      "on-tertiary-fixed": "#1a1b25",
+                      "primary": "#cbbeff",
+                      "tertiary": "#c6c5d3",
+                      "tertiary-fixed": "#e3e1ef",
+                      "surface-variant": "#353439"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "24px",
+                      "section-gap": "48px",
+                      "gutter": "16px",
+                      "unit": "8px",
+                      "stack-md": "12px",
+                      "container-padding": "24px",
+                      "stack-sm": "4px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "h1": ["Inter"],
+                      "h3": ["Inter"],
+                      "h2": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "label-sm": ["11px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                      "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "h3": ["20px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "500"}],
+                      "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Top Navigation Anchor (Suppressed based on Transactional Rule but keeping simple branding) -->
+<header class="flex justify-between items-center w-full px-container-padding py-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="menu_book">menu_book</span>
+<span class="font-h2 text-primary-container tracking-wide font-semibold">RecordBro</span>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-container-padding">
+<div class="w-full max-auto max-w-[440px] flex flex-col gap-section-gap">
+<!-- Branding/Welcome Section -->
+<div class="text-center md:text-left">
+<h1 class="font-h1 text-h1 text-on-background mb-stack-sm">Welcome back</h1>
+<p class="font-body-lg text-body-lg text-on-secondary-container">Enter your credentials to access your academic workspace.</p>
+</div>
+<!-- Sign In Card -->
+<div class="bg-surface-container-low border border-outline-variant p-8 md:p-10 rounded-lg">
+<form class="flex flex-col gap-stack-lg">
+<!-- Email Field -->
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email Address</label>
+<input class="bg-transparent border-b border-outline-variant py-stack-md px-0 focus:outline-none focus:border-primary transition-colors font-body-md text-on-surface placeholder:text-on-secondary-fixed-variant" id="email" placeholder="name@university.edu" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-stack-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<a class="font-label-sm text-label-sm text-primary-container hover:underline transition-all" href="#">Forgot password?</a>
+</div>
+<input class="bg-transparent border-b border-outline-variant py-stack-md px-0 focus:outline-none focus:border-primary transition-colors font-body-md text-on-surface placeholder:text-on-secondary-fixed-variant" id="password" placeholder="••••••••" type="password"/>
+</div>
+<!-- Actions -->
+<div class="pt-stack-md">
+<button class="w-full bg-primary-container text-on-primary-container font-label-md py-4 rounded-lg hover:bg-[#b0a0f8] active:scale-[0.98] transition-all duration-150" type="submit">
+                            Sign In
+                        </button>
+</div>
+</form>
+<div class="mt-stack-lg pt-stack-lg border-t border-outline-variant text-center">
+<p class="font-body-md text-body-md text-on-secondary-container">
+                        New to RecordBro? 
+                        <a class="text-primary-container font-semibold hover:underline" href="#">Create an account</a>
+</p>
+</div>
+</div>
+<!-- Subtle Decorative Element -->
+<div class="flex justify-center md:justify-start items-center gap-4 opacity-40">
+<div class="h-px w-8 bg-outline-variant"></div>
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-on-tertiary-container uppercase">Scholarly Focus</span>
+<div class="h-px w-8 bg-outline-variant"></div>
+</div>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="px-container-padding py-8">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<p class="font-label-sm text-label-sm text-on-tertiary-container">© 2024 RecordBro Academic Systems</p>
+<nav class="flex gap-gutter">
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Support</a>
+</nav>
+</div>
+</footer>
+<!-- Background Image / Tonal Layer for Academic Feel -->
+<div class="fixed inset-0 -z-10 opacity-10 pointer-events-none overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="A macro photograph of aged library book spines and open academic journals, arranged in a clean, minimalist fashion. The lighting is soft and directional, highlighting the textures of paper and linen. The overall mood is studious, quiet, and sophisticated, reflecting a deep-work environment with a dark, desaturated palette of deep grays and soft purples." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGPJio1rqlta7nT8nIwA0Rc1G2ggAhwX7-Y9cdJ5X0KfO5C85pZI9obHkD0rSfZLiNwX2CbzuNCc0Yg71WSYmITDgIEdiFJ47la-_Qxm_uT7Nd-MS2DeOytA7TmeBDQg1mm44LagczYKWcnbP_cWRJ6-BAnYJ_wRro5zgaWkj_SFnYOUhZcvBHTxVK_sUdBg6uFetDjdfMJEckDxEyTSyOce-J5pIe932GxYlwRzuNZ-FFnz2u8JZxz6p9PGJPTKTcBsz2R0O0SiRr"/>
+</div>
+</body></html>

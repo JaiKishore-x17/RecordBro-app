@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RecordBro - Wallet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1b1b1f",
+                        "surface-dim": "#131317",
+                        "on-tertiary-container": "#30303b",
+                        "on-surface-variant": "#c9c4d4",
+                        "inverse-on-surface": "#303034",
+                        "secondary-container": "#4b4b53",
+                        "secondary": "#c7c5cf",
+                        "on-secondary-fixed-variant": "#46464e",
+                        "secondary-fixed": "#e3e1eb",
+                        "primary-fixed-dim": "#cbbeff",
+                        "on-tertiary-fixed-variant": "#454651",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c7c5cf",
+                        "on-secondary-container": "#bcbac4",
+                        "tertiary-fixed": "#e3e1ef",
+                        "surface-container-highest": "#353439",
+                        "inverse-primary": "#614eb2",
+                        "surface-container": "#1f1f23",
+                        "primary-fixed": "#e6deff",
+                        "on-secondary-fixed": "#1b1b22",
+                        "on-primary-fixed-variant": "#493598",
+                        "surface": "#131317",
+                        "background": "#131317",
+                        "tertiary-fixed-dim": "#c6c5d3",
+                        "outline": "#938e9d",
+                        "on-primary": "#321a81",
+                        "inverse-surface": "#e4e1e7",
+                        "on-secondary": "#303037",
+                        "error": "#ffb4ab",
+                        "tertiary": "#c6c5d3",
+                        "primary-container": "#9d8af2",
+                        "on-error": "#690005",
+                        "on-primary-container": "#331a82",
+                        "surface-container-high": "#2a2a2e",
+                        "on-background": "#e4e1e7",
+                        "surface-variant": "#353439",
+                        "surface-tint": "#cbbeff",
+                        "primary": "#cbbeff",
+                        "on-surface": "#e4e1e7",
+                        "on-tertiary": "#2f303a",
+                        "surface-container-lowest": "#0e0e12",
+                        "surface-bright": "#39393d",
+                        "on-tertiary-fixed": "#1a1b25",
+                        "outline-variant": "#484552",
+                        "tertiary-container": "#9998a5",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#1d0061"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "4px",
+                        "stack-md": "12px",
+                        "section-gap": "48px",
+                        "container-padding": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h3": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "500" }],
+                        "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-lg text-body-lg min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="bg-[#121215] dark:bg-[#121215] sticky w-full top-0 border-b border-[#2A2A30] z-40 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-gutter">
+<button aria-label="Menu" class="md:hidden text-[#9D8AF2] hover:bg-[#1C1C21] transition-colors p-2 rounded-full -ml-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-[#9D8AF2] font-bold text-xl tracking-tighter">RecordBro</span>
+</div>
+<!-- Desktop Nav Cluster -->
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-['Inter'] font-semibold tracking-tight text-lg text-gray-400 hover:text-[#9D8AF2] hover:bg-[#1C1C21] transition-colors px-3 py-1.5 rounded" href="#">Home</a>
+<a class="font-['Inter'] font-semibold tracking-tight text-lg text-gray-400 hover:text-[#9D8AF2] hover:bg-[#1C1C21] transition-colors px-3 py-1.5 rounded" href="#">Work</a>
+<a class="font-['Inter'] font-semibold tracking-tight text-lg text-gray-400 hover:text-[#9D8AF2] hover:bg-[#1C1C21] transition-colors px-3 py-1.5 rounded" href="#">Create</a>
+<a class="font-['Inter'] font-semibold tracking-tight text-lg text-[#9D8AF2] opacity-80 duration-200 px-3 py-1.5 rounded" href="#">Wallet</a>
+<a class="font-['Inter'] font-semibold tracking-tight text-lg text-gray-400 hover:text-[#9D8AF2] hover:bg-[#1C1C21] transition-colors px-3 py-1.5 rounded" href="#">Profile</a>
+</div>
+<button aria-label="Notifications" class="text-[#9D8AF2] hover:bg-[#1C1C21] transition-colors p-2 rounded-full -mr-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-[800px] mx-auto px-container-padding py-section-gap pb-32 flex flex-col gap-section-gap">
+<!-- Hero Balance Section -->
+<section class="flex flex-col items-center text-center gap-stack-md py-stack-lg">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">Current Balance</h2>
+<div class="text-[56px] leading-none font-bold text-on-surface tracking-tighter" style="font-family: 'Inter', sans-serif;">$1,245.50</div>
+<button class="mt-stack-lg px-8 py-3 bg-primary-container text-on-primary-container font-label-md text-label-md rounded border border-primary-container hover:bg-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+                Withdraw Funds
+            </button>
+</section>
+<!-- Earnings & Spent Grid -->
+<section class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface-container rounded-lg p-container-padding border border-surface-container-highest flex flex-col gap-stack-sm hover:border-outline-variant transition-colors group">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Earnings</span>
+<span class="material-symbols-outlined text-primary text-[18px] opacity-70 group-hover:opacity-100 transition-opacity">trending_up</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">$3,450.00</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">This month</span>
+</div>
+<div class="bg-surface-container rounded-lg p-container-padding border border-surface-container-highest flex flex-col gap-stack-sm hover:border-outline-variant transition-colors group">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Spent</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] opacity-70 group-hover:opacity-100 transition-opacity">trending_down</span>
+</div>
+<span class="font-h2 text-h2 text-on-surface">$2,204.50</span>
+<span class="font-label-sm text-label-sm text-outline mt-1">This month</span>
+</div>
+</section>
+<!-- Transaction History -->
+<section class="flex flex-col gap-stack-md">
+<div class="flex items-center justify-between mb-stack-md border-b border-surface-container-highest pb-4">
+<h3 class="font-h3 text-h3 text-on-surface">Transaction History</h3>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-fixed transition-colors flex items-center gap-1 uppercase tracking-widest">
+                    Filter <span class="material-symbols-outlined text-[14px]">filter_list</span>
+</button>
+</div>
+<div class="flex flex-col">
+<!-- Transaction Item -->
+<div class="flex justify-between items-center py-stack-md border-b border-surface-container-high group hover:bg-surface-container-low transition-colors -mx-4 px-4 rounded">
+<div class="flex items-center gap-stack-lg">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="description">description</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-md text-body-md text-on-surface font-medium">Transcription - Lecture 4</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 24, 2023 • Project Alpha</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-primary font-medium tracking-tight">+$45.00</span>
+</div>
+<!-- Transaction Item -->
+<div class="flex justify-between items-center py-stack-md border-b border-surface-container-high group hover:bg-surface-container-low transition-colors -mx-4 px-4 rounded">
+<div class="flex items-center gap-stack-lg">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:text-on-surface transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="memory">memory</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-md text-body-md text-on-surface font-medium">Hardware upgrade - Mic</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 21, 2023 • Equipment</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium tracking-tight">-$120.00</span>
+</div>
+<!-- Transaction Item -->
+<div class="flex justify-between items-center py-stack-md border-b border-surface-container-high group hover:bg-surface-container-low transition-colors -mx-4 px-4 rounded">
+<div class="flex items-center gap-stack-lg">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit_document">edit_document</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-md text-body-md text-on-surface font-medium">Proofreading - Thesis</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 18, 2023 • Independent</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-primary font-medium tracking-tight">+$85.00</span>
+</div>
+<!-- Transaction Item -->
+<div class="flex justify-between items-center py-stack-md border-b border-surface-container-high group hover:bg-surface-container-low transition-colors -mx-4 px-4 rounded">
+<div class="flex items-center gap-stack-lg">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:text-on-surface transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="cloud_download">cloud_download</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-md text-body-md text-on-surface font-medium">Cloud Storage Subscription</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 15, 2023 • Software</span>
+</div>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium tracking-tight">-$15.00</span>
+</div>
+</div>
+<button class="w-full py-4 mt-stack-sm rounded border border-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md uppercase tracking-widest">
+                Load More
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-[#1C1C21] dark:bg-[#1C1C21] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 h-20 border-t border-[#2A2A30] md:hidden">
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest">Work</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="add_circle">add_circle</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest">Create</span>
+</a>
+<!-- Active Wallet Tab -->
+<a class="flex flex-col items-center justify-center text-[#9D8AF2] border-t-2 border-[#9D8AF2] pt-2 scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest">Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 pt-2 hover:text-[#9D8AF2] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

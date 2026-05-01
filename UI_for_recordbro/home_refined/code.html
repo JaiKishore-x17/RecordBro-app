@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#e4e1e7",
+                    "on-secondary-container": "#bcbac4",
+                    "on-primary": "#321a81",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#9998a5",
+                    "on-primary-fixed-variant": "#493598",
+                    "surface": "#131317",
+                    "primary-container": "#9d8af2",
+                    "secondary": "#c7c5cf",
+                    "on-secondary": "#303037",
+                    "on-tertiary": "#2f303a",
+                    "secondary-fixed": "#e3e1eb",
+                    "on-tertiary-container": "#30303b",
+                    "surface-container": "#1f1f23",
+                    "on-primary-container": "#331a82",
+                    "on-surface-variant": "#c9c4d4",
+                    "secondary-fixed-dim": "#c7c5cf",
+                    "outline": "#938e9d",
+                    "primary-fixed": "#e6deff",
+                    "surface-container-low": "#1b1b1f",
+                    "primary-fixed-dim": "#cbbeff",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#cbbeff",
+                    "surface-container-lowest": "#0e0e12",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#1d0061",
+                    "surface-container-high": "#2a2a2e",
+                    "tertiary-fixed-dim": "#c6c5d3",
+                    "inverse-on-surface": "#303034",
+                    "on-secondary-fixed": "#1b1b22",
+                    "surface-bright": "#39393d",
+                    "inverse-surface": "#e4e1e7",
+                    "on-error": "#690005",
+                    "background": "#131317",
+                    "secondary-container": "#4b4b53",
+                    "surface-dim": "#131317",
+                    "on-surface": "#e4e1e7",
+                    "on-secondary-fixed-variant": "#46464e",
+                    "inverse-primary": "#614eb2",
+                    "outline-variant": "#484552",
+                    "on-tertiary-fixed-variant": "#454651",
+                    "surface-container-highest": "#353439",
+                    "on-tertiary-fixed": "#1a1b25",
+                    "primary": "#cbbeff",
+                    "tertiary": "#c6c5d3",
+                    "tertiary-fixed": "#e3e1ef",
+                    "surface-variant": "#353439"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "section-gap": "48px",
+                    "gutter": "16px",
+                    "unit": "8px",
+                    "stack-md": "12px",
+                    "container-padding": "24px",
+                    "stack-sm": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "h1": ["Inter"],
+                    "h3": ["Inter"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "label-sm": ["11px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "500"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #121215;
+            color: #e4e1e7;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md antialiased pb-28">
+<!-- TopAppBar -->
+<header class="bg-[#121215] dark:bg-[#121215] font-['Inter'] antialiased tracking-tight docked full-width top-0 border-b border-[#2A2A30] flex justify-between items-center w-full px-6 py-4 sticky z-40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#9D8AF2]" data-icon="menu_book">menu_book</span>
+<h1 class="text-xl font-semibold text-[#9D8AF2] tracking-wide">RecordBro</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-6 mr-6">
+<a class="text-[#9D8AF2] font-label-md transition-colors hover:bg-[#1C1C21] px-3 py-2 rounded" href="#">Home</a>
+<a class="text-[#A0A0A5] font-label-md transition-colors hover:bg-[#1C1C21] px-3 py-2 rounded" href="#">My Work</a>
+<a class="text-[#A0A0A5] font-label-md transition-colors hover:bg-[#1C1C21] px-3 py-2 rounded" href="#">Wallet</a>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-[#2A2A30]">
+<img alt="Student profile photo" data-alt="A close-up portrait of a thoughtful young adult student in a minimalist, dimly lit library environment. The lighting is soft and moody, emphasizing a studious and calm atmosphere. The subject is wearing a simple dark turtleneck, blending into the sophisticated dark palette of the background. The overall aesthetic is clean, academic, and highly focused, reflecting a deep work state." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnlow1GLaUeQP7Vtq-jxGMRm81NgYLNGeTr7jB2L5cVaaYrnHKGmWVhNtpPqiDf_MarFs3y87DZMsr6rLGpHIdewM22mPyaErAOt5TrlykR_0cE4Xcnv5sEJzjFwaPMWFOeIhhWk01Vhch20GPtrpa41qsQ7f2IcxBO0AfwHeSy--e3yhLdR3R88VmGkkqpT3DFEhCuz4JbvjM1mmC5tKOg2-4MUd35rb5V_jy0VzcZoGg2RSBHMfyo1nXgaWCRojQrbUBh2UkbNn1"/>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-container-padding pt-stack-lg md:pt-section-gap">
+<!-- Greeting Section -->
+<section class="mb-section-gap">
+<h2 class="font-h1 text-h1 text-on-background">Hello, Julian</h2>
+<p class="font-body-lg text-body-lg text-on-secondary-container mt-2">Ready for some focused work? There are 14 new requests in your field.</p>
+</section>
+<!-- Category Filters -->
+<nav class="flex items-center gap-stack-md mb-stack-lg overflow-x-auto pb-2 scrollbar-hide">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-sm whitespace-nowrap">All Subjects</button>
+<button class="bg-[#1C1C21] border border-[#2A2A30] text-on-secondary-container px-4 py-2 rounded-lg font-label-sm hover:border-[#9D8AF2] transition-colors whitespace-nowrap">Chemistry</button>
+<button class="bg-[#1C1C21] border border-[#2A2A30] text-on-secondary-container px-4 py-2 rounded-lg font-label-sm hover:border-[#9D8AF2] transition-colors whitespace-nowrap">Mathematics</button>
+<button class="bg-[#1C1C21] border border-[#2A2A30] text-on-secondary-container px-4 py-2 rounded-lg font-label-sm hover:border-[#9D8AF2] transition-colors whitespace-nowrap">Computer Science</button>
+<button class="bg-[#1C1C21] border border-[#2A2A30] text-on-secondary-container px-4 py-2 rounded-lg font-label-sm hover:border-[#9D8AF2] transition-colors whitespace-nowrap">Literature</button>
+</nav>
+<!-- Available Requests Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Featured Request -->
+<div class="md:col-span-8 bg-[#1C1C21] border border-[#2A2A30] rounded-xl p-stack-lg flex flex-col justify-between group hover:border-[#9D8AF2] transition-colors">
+<div>
+<div class="flex justify-between items-start mb-stack-md">
+<span class="bg-[#2A2A30] text-[#9D8AF2] px-3 py-1 rounded-full text-label-sm uppercase tracking-widest font-bold">Priority</span>
+<span class="text-primary font-h3">$45.00</span>
+</div>
+<h3 class="font-h2 text-h2 mb-2">Organic Chemistry: Synthesis of Esters</h3>
+<p class="font-body-md text-on-secondary-container mb-stack-lg max-w-lg">Complete a detailed lab report focusing on the mechanism of Fischer esterification including all balanced equations and safety protocols.</p>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
+<div class="flex items-center gap-4 text-on-secondary-container">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+<span class="font-label-sm">2h remaining</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="school">school</span>
+<span class="font-label-sm">Chemistry</span>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container w-full sm:w-auto px-6 py-3 rounded font-label-md font-bold hover:opacity-90 transition-opacity">Accept Request</button>
+</div>
+</div>
+<!-- Secondary Request -->
+<div class="md:col-span-4 bg-[#1C1C21] border border-[#2A2A30] rounded-xl p-stack-lg flex flex-col justify-between hover:border-[#9D8AF2] transition-colors">
+<div>
+<div class="flex justify-between items-start mb-stack-md">
+<span class="bg-[#2A2A30] text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Standard</span>
+<span class="text-primary font-h3">$22.50</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Calculus II: Taylor Series</h3>
+<p class="font-body-md text-on-secondary-container mb-4">Verification of convergence for power series and error estimation.</p>
+</div>
+<button class="w-full border border-primary text-primary px-4 py-3 rounded font-label-md hover:bg-primary hover:text-on-primary transition-all">Accept</button>
+</div>
+<!-- Third Request -->
+<div class="md:col-span-4 bg-[#1C1C21] border border-[#2A2A30] rounded-xl p-stack-lg flex flex-col justify-between hover:border-[#9D8AF2] transition-colors">
+<div>
+<div class="flex justify-between items-start mb-stack-md">
+<span class="bg-[#2A2A30] text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Standard</span>
+<span class="text-primary font-h3">$18.00</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Intro to Python: Arrays</h3>
+<p class="font-body-md text-on-secondary-container mb-4">Implementation of basic sorting algorithms using NumPy.</p>
+</div>
+<button class="w-full border border-primary text-primary px-4 py-3 rounded font-label-md hover:bg-primary hover:text-on-primary transition-all">Accept</button>
+</div>
+<!-- Fourth Request -->
+<div class="md:col-span-4 bg-[#1C1C21] border border-[#2A2A30] rounded-xl p-stack-lg flex flex-col justify-between hover:border-[#9D8AF2] transition-colors">
+<div>
+<div class="flex justify-between items-start mb-stack-md">
+<span class="bg-[#2A2A30] text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Urgent</span>
+<span class="text-primary font-h3">$35.00</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Modernism in Poetry</h3>
+<p class="font-body-md text-on-secondary-container mb-4">Analysis of T.S. Eliot's "The Waste Land" regarding structural fragmentation.</p>
+</div>
+<button class="w-full border border-primary text-primary px-4 py-3 rounded font-label-md hover:bg-primary hover:text-on-primary transition-all">Accept</button>
+</div>
+<!-- Fifth Request (Small/Horizontal style) -->
+<div class="md:col-span-4 bg-[#1C1C21] border border-[#2A2A30] rounded-xl p-stack-lg flex flex-col justify-between hover:border-[#9D8AF2] transition-colors">
+<div>
+<div class="flex justify-between items-start mb-stack-md">
+<span class="bg-[#2A2A30] text-on-secondary-container px-3 py-1 rounded-full text-label-sm">New</span>
+<span class="text-primary font-h3">$12.00</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Statistics: Null Hypothesis</h3>
+<p class="font-body-md text-on-secondary-container mb-4">Drafting a summary for a basic p-value analysis task.</p>
+</div>
+<button class="w-full border border-primary text-primary px-4 py-3 rounded font-label-md hover:bg-primary hover:text-on-primary transition-all">Accept</button>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center mt-section-gap">
+<button class="group flex items-center gap-2 text-on-secondary-container hover:text-primary transition-colors">
+<span class="font-label-md">View more requests</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-y-1 transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-[#121215] dark:bg-[#121215] border-t border-[#2A2A30] flex justify-between items-center px-2 py-3 z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-[#9D8AF2] bg-[#1C1C21] rounded-lg py-1 px-3 w-[18%] active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] sm:text-[11px] font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#A0A0A5] py-1 px-3 w-[18%] hover:text-white transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-['Inter'] text-[10px] sm:text-[11px] font-medium mt-1">Work</span>
+</a>
+<a class="relative -top-5 flex flex-col items-center justify-center bg-[#9D8AF2] text-[#121215] rounded-full w-14 h-14 shadow-[0_0_15px_rgba(157,138,242,0.3)] border-4 border-[#121215] active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined text-[32px]" data-icon="add">add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#A0A0A5] py-1 px-3 w-[18%] hover:text-white transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-['Inter'] text-[10px] sm:text-[11px] font-medium mt-1">Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#A0A0A5] py-1 px-3 w-[18%] hover:text-white transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] sm:text-[11px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
