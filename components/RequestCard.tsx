@@ -1,54 +1,64 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Clock, School } from 'lucide-react-native';
+import { Clock } from 'lucide-react-native';
+import { styles, theme } from '@/constants/Styles';
 
 interface RequestCardProps {
   title: string;
   description: string;
-  price: string;
+  reward: string;
   tag: string;
   time: string;
-  subject: string;
-  isFeatured?: boolean;
 }
 
 export function RequestCard({ 
   title, 
   description, 
-  price, 
+  reward, 
   tag, 
-  time, 
-  subject, 
-  isFeatured 
+  time
 }: RequestCardProps) {
   return (
-    <View className={`bg-surface-container-low border border-outline-variant rounded-xl p-5 mb-4 ${isFeatured ? 'border-primary-container/30' : ''}`}>
-      <View className="flex-row justify-between items-start mb-3">
-        <View className="bg-surface-container-high px-3 py-1 rounded-full">
-          <Text className="text-label-sm text-on-surface-variant font-bold">{tag}</Text>
+    <View style={styles.card}>
+      {/* Top row: Tag and Time */}
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+        <View style={[styles.pill, { borderColor: '#8B5CF6' }]}>
+          <Text style={[styles.labelSm, { color: '#8B5CF6' }]}>{tag.toUpperCase()}</Text>
         </View>
-        <Text className="text-h3 text-primary">{price}</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+          <Clock size={12} color="#A1A1AA" />
+          <Text style={styles.labelXs}>{time.toUpperCase()}</Text>
+        </View>
       </View>
       
-      <Text className={isFeatured ? "text-h2 mb-2" : "text-h3 mb-2"}>{title}</Text>
-      <Text className="text-body-md text-on-secondary-container mb-4" numberOfLines={isFeatured ? 3 : 2}>
+      {/* Content */}
+      <Text style={[styles.h3, { marginBottom: 6 }]}>{title}</Text>
+      <Text style={[styles.body, { marginBottom: 16 }]} numberOfLines={2}>
         {description}
       </Text>
       
-      <View className="flex-row items-center justify-between mt-auto">
-        <View className="flex-row items-center gap-4">
-          <View className="flex-row items-center gap-1">
-            <Clock size={16} color="#c9c4d4" />
-            <Text className="text-label-sm text-on-surface-variant">{time}</Text>
-          </View>
-          <View className="flex-row items-center gap-1">
-            <School size={16} color="#c9c4d4" />
-            <Text className="text-label-sm text-on-surface-variant">{subject}</Text>
-          </View>
+      {/* Divider */}
+      <View style={{ height: 1, backgroundColor: '#262626', marginBottom: 16 }} />
+      
+      {/* Reward Section */}
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <View>
+          <Text style={[styles.labelXs, { marginBottom: 4 }]}>REWARD</Text>
+          <Text style={styles.rewardText}>{reward}</Text>
         </View>
         
-        <TouchableOpacity className="bg-primary-container px-4 py-2 rounded-lg active:opacity-80">
-          <Text className="text-on-primary-container font-bold text-label-md">Accept</Text>
+        <TouchableOpacity style={{ 
+          backgroundColor: '#00E676',
+          paddingHorizontal: 24,
+          paddingVertical: 10,
+          borderRadius: 8,
+          elevation: 4,
+          shadowColor: '#00E676',
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.3,
+          shadowRadius: 4,
+        }}>
+          <Text style={{ color: '#000000', fontWeight: '900', fontSize: 13 }}>ACCEPT</Text>
         </TouchableOpacity>
       </View>
     </View>

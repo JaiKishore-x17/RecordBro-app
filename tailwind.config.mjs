@@ -21,6 +21,12 @@ export default {
           on: "#303037",
           "on-container": "#bcbac4",
         },
+        tertiary: {
+          DEFAULT: "#c6c5d3",
+          container: "#9998a5",
+          on: "#2f303a",
+          "on-container": "#30303b",
+        },
         surface: {
           DEFAULT: "#131317",
           dim: "#131317",
@@ -38,6 +44,10 @@ export default {
           surface: "#e4e1e7",
           "surface-variant": "#c9c4d4",
           background: "#e4e1e7",
+          primary: "#321a81",
+          secondary: "#303037",
+          "secondary-container": "#bcbac4",
+          "on-background": "#e4e1e7",
         },
         outline: {
           DEFAULT: "#938e9d",
@@ -50,6 +60,13 @@ export default {
           on: "#690005",
           "on-container": "#ffdad6",
         },
+        // Direct colors for easier mapping from HTML
+        "on-background": "#e4e1e7",
+        "on-secondary-container": "#bcbac4",
+        "primary-container": "#9d8af2",
+        "surface-container-low": "#1b1b1f",
+        "surface-container-high": "#2a2a2e",
+        "outline-variant": "#484552",
       },
       borderRadius: {
         none: "0px",
@@ -71,6 +88,15 @@ export default {
         "stack-md": "12px",
         "stack-lg": "24px",
         "section-gap": "48px",
+      },
+      fontSize: {
+        "h1": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "h2": ["24px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "h3": ["20px", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "500" }],
+        "body-lg": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+        "body-md": ["14px", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }],
+        "label-md": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }],
+        "label-sm": ["11px", { lineHeight: "1", letterSpacing: "0.08em", fontWeight: "600" }],
       },
     },
   },

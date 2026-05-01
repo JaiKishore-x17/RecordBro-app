@@ -1,11 +1,11 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { View, TouchableOpacity, Platform } from 'react-native';
+import { View, Platform } from 'react-native';
 import { Home, ClipboardList, Plus, Wallet, User } from 'lucide-react-native';
-import { Colors } from '@/constants/Colors';
+import { theme } from '@/constants/Styles';
 
 export default function TabLayout() {
-  const colors = Colors.dark;
+  const colors = theme.colors;
 
   return (
     <Tabs
@@ -18,8 +18,8 @@ export default function TabLayout() {
           paddingBottom: Platform.OS === 'ios' ? 28 : 12,
           paddingTop: 12,
         },
-        tabBarActiveTintColor: colors.primaryContainer,
-        tabBarInactiveTintColor: colors.inactive,
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.textGrey,
         tabBarShowLabel: true,
         tabBarLabelStyle: {
           fontFamily: 'Inter',
@@ -34,7 +34,7 @@ export default function TabLayout() {
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <View className={focused ? "bg-[#1C1C21] p-2 rounded-lg" : ""}>
+            <View style={focused ? { backgroundColor: '#1C1C21', padding: 8, borderRadius: 8 } : {}}>
               <Home size={22} color={color} />
             </View>
           ),
@@ -45,7 +45,7 @@ export default function TabLayout() {
         options={{
           title: 'Work',
           tabBarIcon: ({ color, focused }) => (
-            <View className={focused ? "bg-[#1C1C21] p-2 rounded-lg" : ""}>
+            <View style={focused ? { backgroundColor: '#1C1C21', padding: 8, borderRadius: 8 } : {}}>
               <ClipboardList size={22} color={color} />
             </View>
           ),
@@ -62,13 +62,13 @@ export default function TabLayout() {
                 width: 56,
                 height: 56,
                 borderRadius: 28,
-                backgroundColor: colors.primaryContainer,
+                backgroundColor: colors.primary,
                 justifyContent: 'center',
                 alignItems: 'center',
-                borderWidth: 4,
-                borderColor: '#121215',
+                borderWidth: 3,
+                borderColor: '#151215ff',
                 elevation: 5,
-                shadowColor: colors.primaryContainer,
+                shadowColor: colors.primary,
                 shadowOffset: { width: 0, height: 0 },
                 shadowOpacity: 0.3,
                 shadowRadius: 15,
@@ -84,7 +84,7 @@ export default function TabLayout() {
         options={{
           title: 'Wallet',
           tabBarIcon: ({ color, focused }) => (
-            <View className={focused ? "bg-[#1C1C21] p-2 rounded-lg" : ""}>
+            <View style={focused ? { backgroundColor: '#1C1C21', padding: 8, borderRadius: 8 } : {}}>
               <Wallet size={22} color={color} />
             </View>
           ),
@@ -95,7 +95,7 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
-            <View className={focused ? "bg-[#1C1C21] p-2 rounded-lg" : ""}>
+            <View style={focused ? { backgroundColor: '#1C1C21', padding: 8, borderRadius: 8 } : {}}>
               <User size={22} color={color} />
             </View>
           ),

@@ -1,22 +1,49 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import { BookOpen } from 'lucide-react-native';
+import { View, Text, TouchableOpacity, Platform, StatusBar } from 'react-native';
+import { LayoutDashboard, User } from 'lucide-react-native';
+import { theme } from '@/constants/Styles';
 
 export function Header() {
   return (
-    <View className="flex-row justify-between items-center px-6 py-4 border-b border-outline-variant bg-surface">
-      <View className="flex-row items-center gap-3">
-        <BookOpen size={24} color="#9D8AF2" />
-        <Text className="text-xl font-semibold text-primary-container tracking-wide">RecordBro</Text>
-      </View>
-      <View className="flex-row items-center gap-4">
-        <View className="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
-          <Image 
-            source={{ uri: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDnlow1GLaUeQP7Vtq-jxGMRm81NgYLNGeTr7jB2L5cVaaYrnHKGmWVhNtpPqiDf_MarFs3y87DZMsr6rLGpHIdewM22mPyaErAOt5TrlykR_0cE4Xcnv5sEJzjFwaPMWFOeIhhWk01Vhch20GPtrpa41qsQ7f2IcxBO0AfwHeSy--e3yhLdR3R88VmGkkqpT3DFEhCuz4JbvjM1mmC5tKOg2-4MUd35rb5V_jy0VzcZoGg2RSBHMfyo1nXgaWCRojQrbUBh2UkbNn1' }}
-            className="w-full h-full"
-          />
+    <View style={{ 
+      flexDirection: 'row', 
+      justifyContent: 'space-between', 
+      alignItems: 'center', 
+      paddingHorizontal: 20, 
+      paddingTop: Platform.OS === 'android' ? 5 : 12,
+      paddingBottom: 16,
+      backgroundColor: theme.colors.background 
+    }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <View style={{ backgroundColor: '#1A1A1A', padding: 6, borderRadius: 8 }}>
+          <LayoutDashboard size={20} color="#8B5CF6" />
         </View>
+        <Text style={{ 
+          fontSize: 20, 
+          fontWeight: '900', 
+          color: '#8B5CF6', 
+          letterSpacing: 2,
+          textTransform: 'uppercase'
+        }}>
+          RecordBro
+        </Text>
       </View>
+      
+      <TouchableOpacity activeOpacity={0.8}>
+        <View style={{ 
+          width: 40, 
+          height: 40, 
+          borderRadius: 20, 
+          borderWidth: 1, 
+          borderColor: '#8B5CF6',
+          backgroundColor: '#1A1A1A',
+          justifyContent: 'center',
+          alignItems: 'center',
+          overflow: 'hidden'
+        }}>
+          <User size={24} color="#8B5CF6" />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
