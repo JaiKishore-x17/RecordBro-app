@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, SafeAreaView, StatusBar, Platform } from 'react-native';
+import { useRouter } from 'expo-router';
 import { Header } from '@/components/Header';
 import { RequestCard } from '@/components/RequestCard';
 import { styles, theme } from '@/constants/Styles';
@@ -7,6 +8,7 @@ import { styles, theme } from '@/constants/Styles';
 const CATEGORIES = ['ALL', 'RECORDS', 'ASSIGNMENTS', 'QUIZZES'];
 
 export default function HomeScreen() {
+  const router = useRouter();
   return (
     <SafeAreaView style={[styles.container, { paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }]}>
       <StatusBar barStyle="light-content" />
@@ -38,7 +40,9 @@ export default function HomeScreen() {
               borderRadius: 12,
               flex: 1,
               alignItems: 'center'
-            }}>
+            }}
+            onPress={() => router.push('/create')}
+          >
               <Text style={{ color: '#FFFFFF', fontWeight: '800', fontSize: 13 }}>POST REQUEST</Text>
             </TouchableOpacity>
             

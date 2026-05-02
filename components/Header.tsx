@@ -19,14 +19,21 @@ export function Header() {
           <LayoutDashboard size={20} color="#8B5CF6" />
         </View>
         <Text style={{ 
-          fontSize: 20, 
+          fontSize: 25, 
           fontWeight: '900', 
-          color: '#8B5CF6', 
+          color: '#fcfaffff', 
           letterSpacing: 2,
-          textTransform: 'uppercase'
         }}>
           RecordBro
         </Text>
+        <Text style={{ 
+          fontSize: 25, 
+          fontWeight: '900', 
+          color: '#a47dffff', 
+        }}>
+          !
+        </Text>
+
       </View>
       
       <TouchableOpacity activeOpacity={0.8}>
